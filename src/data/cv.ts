@@ -44,7 +44,6 @@ export const cvData: CVData = {
     title: 'Verzorgende IG / ZZP',
     phone: '06-11865081',
     email: 'sgkzorg@gmail.com',
-    address: 'Cycladenlaan 26, 1060 LW, Amsterdam',
     dateOfBirth: '25-10-1978',
     nationality: 'Nederlands',
     languages: ['Nederlands', 'English', 'Punjabi', 'Hindi'],

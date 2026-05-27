@@ -20,10 +20,11 @@ export interface CVData {
     title: string;
     phone: string;
     email: string;
-    address: string;
     dateOfBirth: string;
     nationality: string;
     languages: string[];
+    linkedin?: string;
+    facebook?: string;
   };
   educationNL: Education[];
   educationEN: Education[];
@@ -47,6 +48,8 @@ export const cvData: CVData = {
     dateOfBirth: '25-10-1978',
     nationality: 'Nederlands',
     languages: ['Nederlands', 'English', 'Punjabi', 'Hindi'],
+    linkedin: 'https://linkedin.com/in/your-profile',
+    facebook: 'https://facebook.com/your-profile',
   },
   educationNL: [
     {

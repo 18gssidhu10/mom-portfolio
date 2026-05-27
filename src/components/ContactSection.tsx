@@ -44,13 +44,34 @@ export function ContactSection() {
             </a>
           </div>
 
-          {/* Location */}
+          {/* Social Links */}
           <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow text-center">
-            <div className="text-4xl mb-4">📍</div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              {language === 'nl' ? 'Locatie' : 'Location'}
+            <div className="text-4xl mb-4">🔗</div>
+            <h3 className="text-lg font-bold text-gray-900 mb-4">
+              {language === 'nl' ? 'Social Media' : 'Social Media'}
             </h3>
-            <p className="text-gray-700">{cvData.personal.address}</p>
+            <div className="flex gap-4 justify-center">
+              {cvData.personal.linkedin && (
+                <a
+                  href={cvData.personal.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-2"
+                >
+                  <span>💼</span> LinkedIn
+                </a>
+              )}
+              {cvData.personal.facebook && (
+                <a
+                  href={cvData.personal.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-2"
+                >
+                  <span>👤</span> Facebook
+                </a>
+              )}
+            </div>
           </div>
         </div>
 

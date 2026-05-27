@@ -93,13 +93,36 @@ export function AboutSection() {
               </a>
             </div>
             <div>
-              <p className="text-gray-600 font-medium">{language === 'nl' ? 'Adres:' : 'Address:'}</p>
-              <p className="text-gray-800">{cvData.personal.address}</p>
-            </div>
-            <div>
               <p className="text-gray-600 font-medium">{language === 'nl' ? 'Nationaliteit:' : 'Nationality:'}</p>
               <p className="text-gray-800">{cvData.personal.nationality}</p>
             </div>
+            {(cvData.personal.linkedin || cvData.personal.facebook) && (
+              <div>
+                <p className="text-gray-600 font-medium">{language === 'nl' ? 'Social Media:' : 'Social Media:'}</p>
+                <div className="flex gap-4">
+                  {cvData.personal.linkedin && (
+                    <a
+                      href={cvData.personal.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 font-semibold"
+                    >
+                      LinkedIn
+                    </a>
+                  )}
+                  {cvData.personal.facebook && (
+                    <a
+                      href={cvData.personal.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 font-semibold"
+                    >
+                      Facebook
+                    </a>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
